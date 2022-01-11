@@ -98,7 +98,7 @@ if st.sidebar.button('Run 🏃‍'):
 	#  Assuming you just bought and held without trading
 	with col1:
 		st.markdown('**BASELINE:**')
-		st.write(f'Return Metric: {base_return_metric}%')
+		st.write(f'Return Metric: {"{:,}".format(base_return_metric)}%')
 		st.write(f'Compound Annual Growth Rate: {base_cagr_metric}')
 		st.write(f'Biggest Drawdown was: {base_dd_metric}%')
 		st.write(f'New Balance: ${"{:,}".format(round(start_balance * (base_return_metric/100),2))}')
@@ -106,7 +106,7 @@ if st.sidebar.button('Run 🏃‍'):
 	# Using the Moving Avergage Strategy
 	with col2:
 		st.markdown('**MOVING AVERAGE STRATEGY:**')
-		st.write(f'Return Metric: {ma_return_metric}%')
+		st.write(f'Return Metric: {"{:,}".format(ma_return_metric)}%')
 		st.write(f'Compound Annual Growth Rate: {ma_cagr_metric}')
 		st.write(f'Biggest Drawdown was: {ma_dd_metric}%')
 		st.write(f'New Balance: ${"{:,}".format(round(start_balance * (ma_return_metric/100),2))}')   
